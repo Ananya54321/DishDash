@@ -4,6 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="endColor">#79F875</color>
     <color name="startColor">#35A01D</color>
-    <color name="iconColor">#4CAF50</color>
+    <color name="iconColor">#FEAD1D</color>
     <color name="textColor">#1fc47a</color>
 </resources>

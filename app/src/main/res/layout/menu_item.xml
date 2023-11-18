@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
         android:layout_height="87dp"
@@ -25,7 +27,7 @@
             android:elevation="10dp">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imageMenu"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_marginLeft="8dp"
@@ -36,7 +38,7 @@
                 app:srcCompat="@drawable/menu1" />
 
             <TextView
-                android:id="@+id/FoodNamePopular"
+                android:id="@+id/foodNameMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -45,12 +47,12 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+                app:layout_constraintBottom_toBottomOf="@+id/imageMenu"
+                app:layout_constraintStart_toEndOf="@+id/imageMenu"
+                app:layout_constraintTop_toTopOf="@+id/imageMenu" />
 
             <TextView
-                android:id="@+id/AddToCartPopular"
+                android:id="@+id/addToCartMenu"
                 android:layout_width="88dp"
                 android:layout_height="23dp"
                 android:layout_marginTop="16dp"
@@ -61,12 +63,12 @@
                 android:text="Add To Cart"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@+id/PricePopular"
-                app:layout_constraintStart_toStartOf="@+id/PricePopular"
-                app:layout_constraintTop_toBottomOf="@+id/PricePopular" />
+                app:layout_constraintEnd_toEndOf="@+id/priceMenu"
+                app:layout_constraintStart_toStartOf="@+id/priceMenu"
+                app:layout_constraintTop_toBottomOf="@+id/priceMenu" />
 
             <TextView
-                android:id="@+id/PricePopular"
+                android:id="@+id/priceMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -80,4 +82,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
