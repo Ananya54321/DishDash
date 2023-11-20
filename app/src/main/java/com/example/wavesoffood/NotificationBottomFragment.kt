@@ -24,7 +24,7 @@ class NotificationBottomFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentNotificationBottomBinding.inflate(layoutInflater, container, false)
+        binding = FragmentNotificationBottomBinding.inflate(inflater, container, false)
         val notifications = listOf(
             "Your order has been Cancelled Successfully",
             "Order has been taken by the driver",

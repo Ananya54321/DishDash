@@ -7,23 +7,21 @@ import com.example.wavesoffood.NotificationBottomFragment
 import com.example.wavesoffood.databinding.FragmentNotificationBottomBinding
 import com.example.wavesoffood.databinding.NotificationItemBinding
 
-class NotificationAdapter(private var notification : ArrayList<String>, private var notificationImage: ArrayList<Int>) : RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
+class NotificationAdapter(private var notifications : ArrayList<String>, private var notificationImages: ArrayList<Int>) : RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationViewHolder {
         val binding = NotificationItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return NotificationViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = notification.size
+    override fun getItemCount(): Int = notifications.size
 
     override fun onBindViewHolder(holder: NotificationViewHolder, position: Int) {
-        holder.bind(position)
+        holder.bind(notifications[position], notificationImages[position])
     }
     inner class NotificationViewHolder(private val binding: NotificationItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(position: Int) {
-            binding.apply {
-                notificationTextView.text = notification[position]
-                notificationImageView.setImageResource(notificationImage[position])
-            }
+        fun bind(notification: String, imageResource: Int) {
+            binding.notificationTextView.text = notification
+            binding.notificationImageView.setImageResource(imageResource)
         }
 
     }
